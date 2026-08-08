@@ -5,17 +5,17 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "users")
+@Entity //jpa로 관리
+@Table(name = "users") //테이블과 매칭
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor //매개변수가 없는 기본 생성자를 만들어 줌
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id //PK 지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //자동 증가
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true) //컬럼 제약조건
     private String email;
 
     @Column(nullable = false)
