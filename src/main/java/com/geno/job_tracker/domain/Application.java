@@ -34,13 +34,17 @@ public class Application {
 
     private LocalDate deadline;
 
+    @Column(columnDefinition = "TEXT")
+    private String postingText;
+
     @Builder
-    public Application(User user, Company company, String position, ApplicationStatus status, LocalDate deadline) {
+    public Application(User user, Company company, String position, ApplicationStatus status, LocalDate deadline, String postingText) {
         this.user = user;
         this.company = company;
         this.position = position;
         this.status = status;
         this.deadline = deadline;
+        this.postingText = postingText;
     }
 
     public void updateStatus(ApplicationStatus status) {

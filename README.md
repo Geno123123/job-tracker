@@ -86,9 +86,9 @@ src/main/java/com/geno/job_tracker
 | `PortfolioLink` | 포트폴리오 링크 | `User` 1:N |
 | `Company` | 회사 | — |
 | `Application` | 지원 건 | `User` N:1, `Company` N:1 |
-| `CoverLetter` | 자기소개서 문항 · 답변 | `User` N:1, `Application` N:1 *(nullable)* |
+| `CoverLetterRequest` | 자기소개서 문항 · 답변 | `User` N:1, `Application` N:1 *(nullable)* |
 
-`CoverLetter`의 `Application` 참조를 `nullable`로 둔 이유는, 특정 회사에 종속되지 않는 **범용 문항 답변**(예: 지원동기 기본안)도 저장하여 재사용할 수 있도록 하기 위함입니다.
+`CoverLetterRequest`의 `Application` 참조를 `nullable`로 둔 이유는, 특정 회사에 종속되지 않는 **범용 문항 답변**(예: 지원동기 기본안)도 저장하여 재사용할 수 있도록 하기 위함입니다.
 
 ---
 
