@@ -23,7 +23,7 @@ public class ApplicationService {
     private final ApplicationRepository applicationRepository;
     private final CompanyRepository companyRepository;
     private final UserRepository userRepository;
-
+    @Transactional
     public Long create(String email, ApplicationCreateRequest request) {
         User user = getUser(email);
         Company company = findOrCreateCompany(request.companyName());
@@ -45,12 +45,12 @@ public class ApplicationService {
                 .map(ApplicationResponse::from)
                 .toList();
     }
-
+    @Transactional
     public void updateStatus(String email, Long applicationId, ApplicationStatus status) {
         Application application = getOwnedApplication(email, applicationId);
         application.updateStatus(status);
     }
-
+    @Transactional
     public void delete(String email, Long applicationId) {
         Application application = getOwnedApplication(email, applicationId);
         applicationRepository.delete(application);
