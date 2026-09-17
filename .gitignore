@@ -1,5 +1,6 @@
 HELP.md
 .gradle
+.env
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -41,3 +42,5 @@ frontend/node_modules/
 frontend/dist/
 frontend/.env
 frontend/*.local
+
+
