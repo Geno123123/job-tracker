@@ -4,7 +4,7 @@ import { STAGES, type Application, type StageKey } from "../types";
 import AddApplicationModal from "../components/AddApplicationModal";
 import ApplicationDetailModal from "../components/ApplicationDetailModal";
 
-const ORDER: StageKey[] = ["DOCUMENT", "CODING_TEST", "INTERVIEW", "PASSED"];
+const ORDER: StageKey[] = ["DOCUMENT", "APTITUDE_TEST", "CODING_TEST", "INTERVIEW_1", "INTERVIEW_2", "PASSED"];
 
 function daysLeft(deadline: string | null) {
   if (!deadline) return null;
