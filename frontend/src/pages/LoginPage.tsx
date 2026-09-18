@@ -31,6 +31,23 @@ export default function LoginPage() {
         }
     }
 
+      async function handleDemoLogin() {
+        setLoading(true);
+        setError("");
+        try {
+        const res = await api.post<LoginResponse>("/api/auth/login", {
+            email: "demo@jobtracker.com",
+            password: "demo1234",
+        });
+        localStorage.setItem("accessToken", res.data.accessToken);
+        localStorage.setItem("userName", res.data.name);
+        navigate("/");
+        } catch {
+        setError("체험 계정 접속에 실패했습니다");
+        setLoading(false);
+        }
+    }
+
     return (
         <div className="flex min-h-screen items-center justify-center px-6">
             <div className="w-full max-w-sm">
@@ -70,6 +87,13 @@ export default function LoginPage() {
                         className="bg-ink w-full rounded-xl py-2.5 text-sm text-white transition hover:opacity-90 disabled:opacity-50"
                     >
                         {loading ? "로그인 중" : "로그인"}
+                    </button>
+                    <button
+                        onClick={handleDemoLogin}
+                        disabled={loading}
+                        className="border-line hover:bg-paper w-full rounded-xl border py-2.5 text-sm transition disabled:opacity-50"
+                        >
+                        둘러보기
                     </button>
                     <p className="text-muted mt-4 text-center text-sm">
                         계정이 없나요?{" "}
