@@ -11,6 +11,8 @@
   --color-stage-interview: #CDE9D6;
   --color-stage-passed: #7ECFAE;
   --color-stage-failed: #DEDBE5;
+  --color-stage-aptitude: #FFE0EC;
+  --color-stage-interview2: #B5DFC4;
 
   --font-sans: "Pretendard Variable", Pretendard, system-ui, sans-serif;
   --font-display: "GmarketSansBold", "Pretendard Variable", sans-serif;

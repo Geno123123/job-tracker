@@ -1,9 +1,11 @@
 export const STAGES = [
-    { key: "DOCUMENT", label: "서류", color: "bg-stage-document" },
-    { key: "CODING_TEST", label: "코딩테스트", color: "bg-stage-codingtest" },
-    { key: "INTERVIEW", label: "면접", color: "bg-stage-interview" },
-    { key: "PASSED", label: "합격", color: "bg-stage-passed" },
-    { key: "FAILED", label: "불합격", color: "bg-stage-failed" },
+  { key: "DOCUMENT", label: "서류", color: "bg-stage-document" },
+  { key: "APTITUDE_TEST", label: "인적성", color: "bg-stage-aptitude" },
+  { key: "CODING_TEST", label: "코딩테스트", color: "bg-stage-codingtest" },
+  { key: "INTERVIEW_1", label: "1차 면접", color: "bg-stage-interview" },
+  { key: "INTERVIEW_2", label: "2차 면접", color: "bg-stage-interview2" },
+  { key: "PASSED", label: "합격", color: "bg-stage-passed" },
+  { key: "FAILED", label: "불합격", color: "bg-stage-failed" },
 ] as const;
 
 export type StageKey = (typeof STAGES)[number]["key"];
