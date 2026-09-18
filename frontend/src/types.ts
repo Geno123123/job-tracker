@@ -21,3 +21,29 @@ export type LoginResponse = {
     email: string;
     name: string;
 };
+
+export type Profile = {
+  id: number;
+  phone: string | null;
+  school: string | null;
+  major: string | null;
+  studentId: string | null;
+  introduction: string | null;
+  desiredPosition: string | null;
+};
+
+export type PortfolioLink = {
+  id: number;
+  label: string;
+  url: string;
+};
+
+export type CoverLetter = {
+  id: number;
+  applicationId: number | null;
+  companyName: string | null;
+  question: string;
+  content: string;
+  charLimit: number | null;
+  charCount: number;
+};

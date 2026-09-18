@@ -2,9 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import App from "./App";
+import Layout from "./components/Layout";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import DashboardPage from "./pages/DashboardPage";
+import ProfilePage from "./pages/ProfilePage";
+import CoverLetterPage from "./pages/CoverLetterPage";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -12,7 +15,11 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/" element={<App />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<DashboardPage />} />
+          <Route path="/cover-letters" element={<CoverLetterPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
