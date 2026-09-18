@@ -175,3 +175,4 @@ docker compose up --build -d
 - Refresh Token을 활용한 토큰 자동 재발급
 - 배포 서버 접근 방식을 SSH 직접 노출에서 AWS Systems Manager 기반으로 전환
 - 테스트 코드 작성 및 CI 단계에 검증 추가
+- - 스키마 변경 관리를 Flyway 기반 마이그레이션으로 전환 (현재는 `ddl-auto=update` 사용)
